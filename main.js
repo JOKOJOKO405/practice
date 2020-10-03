@@ -10,3 +10,9 @@ const newTxt = txtArray.map((txt) => {
 });
 
 console.log(newTxt);
+
+let search = txtArray.filter((text) => {
+  return text === 'し';
+});
+
+console.log(search);
