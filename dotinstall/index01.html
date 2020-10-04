@@ -25,6 +25,9 @@
     .loose{
       transform: scale(0.8);
     }
+    .fade{
+      opacity: 0;
+    }
   </style>
 </head>
 <body>
@@ -32,8 +35,8 @@
   <script>
     'use strict'; //エラーチェック厳しい
 
-    const num = 5;
-    const winner = Math.floor(Math.random() * num); //小数点切り捨て 0-4
+    const num = 10;
+    const winner = Math.floor(Math.random() * num + 1);
 
     for (let i = 0; i < num; i++) {
       const div = document.createElement('div');
@@ -44,9 +47,18 @@
         if(i === winner){
           div.textContent = 'WIN!'
           div.classList.add('win');
+
+          let others = document.querySelectorAll('.box:not(.win)');
+
+          for(let i = 0; i < others.length; i++){
+            others[i].classList.add('fade');
+          }
         }else{
-          div.textContent = 'loose!'
           div.classList.add('loose');
+          let loose = document.querySelectorAll('.loose');
+          for(let i = 0; i < loose.length; i++){
+            loose[i].classList.add('fade');
+          }
         }
       });
 
