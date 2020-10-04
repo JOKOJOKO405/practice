@@ -10,6 +10,12 @@
       height: 100px;
       background-color: skyblue;
       cursor: pointer;
+      transition: all .4s ease-in;
+    }
+    .circle{
+      background-color: pink;
+      border-radius: 50%;
+      transform: rotate(360deg);
     }
   </style>
 </head>
@@ -20,8 +26,9 @@
     
     let target = document.querySelector('.box');
       target.addEventListener('click', () => {
-        target.style.backgroundColor = 'pink';
-        target.style.borderRadius = '50%';
+        // target.style.backgroundColor = 'pink';
+        // target.style.borderRadius = '50%';
+        target.classList.add('circle');
     });
   </script>
 </body>
