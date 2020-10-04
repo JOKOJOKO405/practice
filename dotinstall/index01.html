@@ -5,12 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ドットインストール練習</title>
   <style>
+    body{
+      display: flex;
+    }
     .box{
       width: 100px;
       height: 100px;
       background-color: skyblue;
       cursor: pointer;
       transition: all .4s ease-in;
+      margin: 0 8px;
     }
     .circle{
       background-color: pink;
@@ -20,15 +24,24 @@
   </style>
 </head>
 <body>
-  <div class="box"></div>
+  <div class="box" id="target1"></div>
+  <div class="box" id="target2"></div>
+  <div class="box" id="target3"></div>
   <script>
     'use strict'; //エラーチェック厳しい
     
-    let target = document.querySelector('.box');
-      target.addEventListener('click', () => {
-        // target.style.backgroundColor = 'pink';
-        // target.style.borderRadius = '50%';
-        target.classList.add('circle');
+    const target1 = document.querySelector('#target1');
+    const target2 = document.querySelector('#target2');
+    const target3 = document.querySelector('#target3');
+
+    target1.addEventListener('click', () => {
+        target1.classList.toggle('circle');
+    });
+    target2.addEventListener('click', () => {
+        target2.classList.toggle('circle');
+    });
+    target3.addEventListener('click', () => {
+        target3.classList.toggle('circle');
     });
   </script>
 </body>
