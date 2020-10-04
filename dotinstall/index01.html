@@ -15,5 +15,13 @@
 </head>
 <body>
   <div class="box"></div>
+  <script>
+    'use strict'; //エラーチェック厳しい
+    
+    let target = document.querySelector('.box');
+      target.addEventListener('click', () => {
+        target.style.background = 'pink';
+    });
+  </script>
 </body>
 </html>
