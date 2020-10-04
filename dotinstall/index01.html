@@ -16,6 +16,10 @@
       cursor: pointer;
       transition: all .4s ease-in;
       margin: 8px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 100px;
+      color: white;
     }
     .win{
       background-color: pink;
@@ -48,13 +52,16 @@
           div.textContent = 'WIN!'
           div.classList.add('win');
 
+          // .win以外のセレクタを選択
           let others = document.querySelectorAll('.box:not(.win)');
 
+          // winが出た時点で他の要素を全て消す
           for(let i = 0; i < others.length; i++){
             others[i].classList.add('fade');
           }
         }else{
           div.classList.add('loose');
+          // loosが出たら消す
           let loose = document.querySelectorAll('.loose');
           for(let i = 0; i < loose.length; i++){
             loose[i].classList.add('fade');
