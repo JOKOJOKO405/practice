@@ -25,7 +25,7 @@
     console.log(`Keys: ${key} Value: ${point[key]}`);
   })
 
-
+  
   let x = [1, 2];
   let y = [...x];
   x[0] = 5;
