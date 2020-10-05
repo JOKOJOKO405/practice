@@ -1,12 +1,20 @@
 'use strict';
 
 {
-  const name = 17;
-
-  try {
-    console.log(name.toUpperCase());  
-  } catch (error) {
-    console.log(error);
-  }
+  const posts = [
+    {
+        text: 'studing javascript',
+        likeCount: 0,
+    },
+    {
+      text: 'studing php',
+      likeCount: 0,
+    },
+  ];
   
+  function show(post){
+    console.log(`${post.text} - ${post.likeCount}`);
+  }
+
+  show(posts[1]);
 }
