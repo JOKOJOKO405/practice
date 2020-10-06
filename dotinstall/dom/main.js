@@ -1,16 +1,15 @@
 'use strict';
 
 {
-  // function update(){
-  //   document.querySelector('h1').textContent = '変わった！';
-  // }
-  // setTimeout(update, 1000);
 
   document.querySelector('button').addEventListener('click', function(){
-    // update();
-    const targetNode = document.querySelector('h1');
-    targetNode.textContent = '変わった！';
-    targetNode.title = 'this is title';
-    targetNode.style.backgroundColor = 'skyblue';
+    const item0 = document.querySelectorAll('li')[0];
+
+    const copy = item0.cloneNode(true);
+
+    const ul = document.querySelector('ul');
+    const item2 = document.querySelectorAll('li')[2];
+    ul.insertBefore(copy, item2);
+
   });
 }
