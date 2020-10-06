@@ -3,13 +3,9 @@
 {
 
   document.querySelector('button').addEventListener('click', function(){
-    const item0 = document.querySelectorAll('li')[0];
+    const item1 = document.querySelectorAll('li')[1];
 
-    const copy = item0.cloneNode(true);
-
-    const ul = document.querySelector('ul');
-    const item2 = document.querySelectorAll('li')[2];
-    ul.insertBefore(copy, item2);
-
+    // item1.remove();
+    document.querySelector('ul').removeChild(item1);
   });
 }
