@@ -1,19 +1,12 @@
 'use strict';
 
 {
+  const text = document.querySelector('textarea');
 
-  document.querySelector('button').addEventListener('click', function(){
-    const li = document.createElement('li');
-    const colors = document.querySelectorAll('input');
-    const selected = [];
-
-    colors.forEach(color => {
-      if(color.checked){
-        selected.push(color.value);
-      }
-    })
-
-    li.textContent = selected.join(',');
-    document.querySelector('ul').appendChild(li);
-  });
+  text.addEventListener('focus', () => {
+    console.log('focus');
+  })
+  text.addEventListener('blur', () => {
+    console.log('blur');
+  })
 }
