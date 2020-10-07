@@ -4,8 +4,15 @@
 
   document.querySelector('button').addEventListener('click', function(){
     const li = document.createElement('li');
-    const color = document.querySelector('select');
-    li.textContent = color.value + color.selectedIndex;
+    const colors = document.querySelectorAll('input');
+    let selected;
+
+    colors.forEach((color) => {
+      if(color.checked){
+        selected = color.value;
+      }
+    });
+    li.textContent = selected;
 
     document.querySelector('ul').appendChild(li);
   });
