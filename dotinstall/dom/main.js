@@ -4,11 +4,9 @@
 
   document.querySelector('button').addEventListener('click', function(){
     const li = document.createElement('li');
-    const text = document.querySelector('input');
-    li.textContent = text.value;
-    document.querySelector('ul').appendChild(li);
+    const color = document.querySelector('select');
+    li.textContent = color.value + color.selectedIndex;
 
-    text.value = '';
-    text.focus();
+    document.querySelector('ul').appendChild(li);
   });
 }
