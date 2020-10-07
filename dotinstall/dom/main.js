@@ -5,15 +5,15 @@
   document.querySelector('button').addEventListener('click', function(){
     const li = document.createElement('li');
     const colors = document.querySelectorAll('input');
-    let selected;
+    const selected = [];
 
-    colors.forEach((color) => {
+    colors.forEach(color => {
       if(color.checked){
-        selected = color.value;
+        selected.push(color.value);
       }
-    });
-    li.textContent = selected;
+    })
 
+    li.textContent = selected.join(',');
     document.querySelector('ul').appendChild(li);
   });
 }
