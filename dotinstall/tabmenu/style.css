@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+#container{
+  margin: 30px auto;
+  width: 500px;
+}
+.menu{
+  list-style: none;
+  display: flex
+}
+.menu li a{
+  display: block;
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+.menu li a.active,
+.content.active{
+  background:#000;
+  color: #fff;
+  display: block;
+}
+.content{display: none;}

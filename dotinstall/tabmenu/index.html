@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>modal</title>
+</head>
+<body>
+  <div id="container">
+    <ul class="menu">
+      <li><a data-cont="cont1" href="" class="active">内容1</a></li>
+      <li><a data-cont="cont2" href="">内容2</a></li>
+      <li><a data-cont="cont3" href="">内容3</a></li>
+    </ul>
+
+    <section class="content active" id="cont1">
+      内容1の内容が入る
+    </section>
+    <section class="content" id="cont2">
+      内容2の内容が入る
+    </section>
+    <section class="content" id="cont3">
+      内容3の内容が入る
+    </section>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
