@@ -7,15 +7,21 @@
   <title>Vueの練習</title>
 </head>
 <body>
-  <div id="app">
+  <div id="app" class="container">
     <h1>my todos</h1>
-    <ul>
-      <li v-for="todo in todos">
-        {{ todo }}
+    <p class="info">{{ remaining }}</p>
+    <ul v-if="todos.length">
+      <li v-for="(todo, index) in todos">
+        <input type="checkbox" v-model="todo.isDone">
+        <span :class="{done: todo.isDone}">{{ todo.title }}</span>
+        <span @click="deleteItem(index)" class="del">削除</span>
       </li>
     </ul>
-    <form action="">
-      <input type="text" name="" id="">
+    <ul v-else>
+      <li>No todos</li>
+    </ul>
+    <form action="" @submit.prevent="addItem">
+      <input type="text" name="" id="" v-model="newItem">
       <button type="submit">Add</button>
     </form>
   </div>

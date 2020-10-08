@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  width: 400px;
+  margin: 80px auto;
+}
+h1{
+  border-bottom: 1px solid pink;
+  padding: 16px 0;
+  margin-bottom: 16px;
+}
+ul{
+  margin-bottom: 24px;
+  list-style: none;
+}
+li{
+  line-height: 1.5
+}
+.del{
+  display: block;
+  width: 100px;
+  border-radius: 4px;
+  padding: 10px;
+  background:pink;
+  color: #fff;
+}
+#app li > span.done{
+  text-decoration: line-through;
+  color: #bbb;
+}
+input{
+  padding: 4px;
+}
+button{
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 4px 10px;
+  border: none;
+  background: lavender;
+}
+.info{
+  color: #bbb;
+}
