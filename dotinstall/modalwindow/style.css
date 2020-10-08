@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+#open, #close{
+  cursor: pointer;
+  width: 230px;
+  border-radius: 4px;
+  background: rgb(238, 66, 166);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+}
+#mask{
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#modal{
+  background: white;
+  width: 50%;
+  padding: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 60px auto;
+  border-radius: 10px;
+  z-index: 2;
+  transition: all .4s;
+}
+#mask.hidden{
+  display: none;
+}
+#modal.hidden{
+  transform: translate(0, -500px);
+  opacity: 0;
+  visibility: hidden;
+}
