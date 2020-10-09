@@ -22,6 +22,12 @@
       //   localStorage.setItem('todos', JSON.stringify(this.todos));
       //   console.log('data changed');
       // }
+      todos: {
+        handler: function(){
+          localStorage.setItem('todos', JSON.stringify(this.todos));
+        },
+        deep: true,
+      }
     },
     methods: {
       addItem: function() {
