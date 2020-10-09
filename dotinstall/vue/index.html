@@ -8,8 +8,9 @@
 </head>
 <body>
   <div id="app" class="container">
+    <button class="purge" @click="purge">Purge</button>
     <h1>my todos</h1>
-    <p class="info">{{ remaining }}</p>
+    <p class="info">{{ remaining.length }}</p>
     <ul v-if="todos.length">
       <li v-for="(todo, index) in todos">
         <input type="checkbox" v-model="todo.isDone">

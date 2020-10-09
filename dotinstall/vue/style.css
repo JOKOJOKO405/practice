@@ -45,3 +45,6 @@ button{
 .info{
   color: #bbb;
 }
+button.purge{
+  float: right;
+}
