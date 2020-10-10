@@ -67,7 +67,7 @@ h1 i{
 .todos__date{
   font-size: 14px;
   color: #ccc;
-  margin-right: 8px;
+  margin-right: 16px;
 }
 .no-task-ttl{
   font-weight: bold;
@@ -91,19 +91,20 @@ button{
   border: none;
   display: inline-block;
   color: white;
-  padding: 16px 10px;
   font-family: 'Ubuntu Mono', monospace;
   font-weight: 700;
   border-radius: 4px;
 }
 .add-btn{
   width: 200px;
+  padding: 16px 10px;
   background: darkmagenta;
   font-size: 18px;
 }
-.delete-btn{ 
+.del-btn{ 
   width: 100px;
   background: darkorange;
+  padding: 8px 10px;
 }
 i{
   padding: 0 4px;

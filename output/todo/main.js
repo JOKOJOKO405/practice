@@ -19,8 +19,10 @@
           date: date,
         }
         this.todos.push(items);
-
         this.addItems = '';
+      },
+      deleteTodo: function(index){
+        this.todos.splice(index, 1);
       }
     },
   });
