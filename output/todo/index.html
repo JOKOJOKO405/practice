@@ -16,7 +16,7 @@
       <ul v-if="todos.length" class="todos__list">
         <li v-for="(todo, index) in todos" class="todos__item">
           <input type="checkbox" name="" v-model="todo.done" id="">
-          <p class="todos__ttl">{{ todo.task }}</p>
+          <p class="todos__ttl" @click="modifyShow(index)">{{ todo.task }}</p>
           <p class="todos__date">{{ todo.date }}</p>
           <button class="del-btn" @click.prevent="deleteTodo(index)">Delete</button>
         </li>
@@ -25,7 +25,13 @@
         <li><p class="no-task-ttl"><i class="fas fa-spider"></i>No Tasks</p></li>
       </ul>
       <!-- /.todos__list -->
-      <form action="" @submit.prevent="insertTodo">
+      <form v-for="(todo, index) in todos"
+            v-if="todo.modify === true"
+            @submit.prevent="modifyTodo(index)">
+        <input type="text" v-model="modifyItems" >
+        <button class="add-btn">Modify todo</button>
+      </form>
+      <form @submit.prevent="insertTodo">
         <input type="text" v-model="addItems" >
         <button class="add-btn">Add todo</button>
       </form>
