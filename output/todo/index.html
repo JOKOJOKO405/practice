@@ -17,7 +17,8 @@
         <li v-for="(todo, index) in todos" class="todos__item">
           <input type="checkbox" name="" v-model="todo.done" id="">
           <p class="todos__ttl">{{ todo.task }}</p>
-          {{ todo.date }}
+          <p class="todos__date">{{ todo.date }}</p>
+          <button class="del-btn">Delete</button>
         </li>
       </ul>
       <ul v-else class="todos__list">

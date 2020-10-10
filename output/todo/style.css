@@ -18,6 +18,13 @@ body{
 ul{
   list-style: none;
 }
+input:focus{
+  outline: none;
+  box-shadow: 0 0 0 0.2em rgba(139, 0, 139, 0.6);
+}
+
+
+
 #container{
   margin: 100px auto;
   width: 800px;
@@ -39,14 +46,28 @@ h1 i{
   margin-bottom: 24px;
 }
 .todos__list{
-  margin-bottom: 24px;
+  margin-bottom: 64px;
 }
 .todos__item{
   margin-bottom: 16px;
   display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px dotted #ccc
+}
+.todos__item input[type=checkbox]{
+  display: block;
+  padding: 0 4px;
+  margin-right: 8px;
 }
 .todos__ttl{
-  font-size: 16px;
+  font-size: 18px;
+  width: 70%;
+}
+.todos__date{
+  font-size: 14px;
+  color: #ccc;
+  margin-right: 8px;
 }
 .no-task-ttl{
   font-weight: bold;
@@ -65,18 +86,24 @@ input[type=text]{
   padding: 8px 16px;
   background: #efefef;
 }
-.add-btn{
+button{
   outline: none;
   border: none;
   display: inline-block;
-  width: 200px;
-  background: darkmagenta;
   color: white;
-  padding: 4px 10px;
+  padding: 16px 10px;
   font-family: 'Ubuntu Mono', monospace;
   font-weight: 700;
-  font-size: 18px;
   border-radius: 4px;
+}
+.add-btn{
+  width: 200px;
+  background: darkmagenta;
+  font-size: 18px;
+}
+.delete-btn{ 
+  width: 100px;
+  background: darkorange;
 }
 i{
   padding: 0 4px;
