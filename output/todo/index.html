@@ -3,13 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b6eb3581cf.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <title>todoリスト練習</title>
 </head>
 <body>
   <div id="app">
-    {{ todos }}
+    <div id="container">
+      <h1><i class="fas fa-ghost"></i>{{ title }}<i class="fas fa-ghost"></i></h1>
+      <ul v-if="todos.length" class="todos__list">
+        <li v-for="(todo, index) in todos" class="todos__item">
+          <input type="checkbox" name="" v-model="todo.done" id="">
+          {{ todo.task }}
+          {{ todo.date }}
+        </li>
+      </ul>
+      <ul v-else>
+        <li><p>No tasks</p></li>
+      </ul>
+      <!-- /.todos__list -->
+      <form action="" @submit.prevent="insertTodo">
+        <input type="text" v-model="addItems" >
+        <button class="add-btn">Add todo</button>
+      </form>
+    </div>
   </div>
   <script src="main.js"></script>
 </body>
