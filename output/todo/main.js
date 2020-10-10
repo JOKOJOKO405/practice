@@ -22,7 +22,11 @@
         this.addItems = '';
       },
       deleteTodo: function(index){
-        this.todos.splice(index, 1);
+        if(!this.todos[index].done){
+          alert('まだ終わってないよ！');
+        }else{
+          this.todos.splice(index, 1);
+        }
       }
     },
   });
