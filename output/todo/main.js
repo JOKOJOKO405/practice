@@ -13,13 +13,17 @@
         let d = new Date();
         let date =  d.getFullYear() + "/" + (d.getMonth()+ 1) + "/" + d.getDate();
 
-        var items = {
-          task: this.addItems,
-          done: false,
-          date: date,
+        if(this.addItems !== ''){
+          var items = {
+            task: this.addItems,
+            done: false,
+            date: date,
+          }
+          this.todos.push(items);
+          this.addItems = '';
+        }else{
+          alert('タスクを入力してください');
         }
-        this.todos.push(items);
-        this.addItems = '';
       },
       deleteTodo: function(index){
         if(!this.todos[index].done){
