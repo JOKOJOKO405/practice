@@ -13,6 +13,7 @@ body{
   font-family: 'Ubuntu Mono', monospace, sans-serif;
   font-size: 14px;
   line-height: 1.6;
+  color: #444;
 }
 ul{
   list-style: none;
@@ -38,15 +39,25 @@ h1 i{
   margin-bottom: 24px;
 }
 .todos__list{
-  
+  margin-bottom: 24px;
 }
 .todos__item{
   margin-bottom: 16px;
+  display: flex;
+}
+.todos__ttl{
+  font-size: 16px;
+}
+.no-task-ttl{
+  font-weight: bold;
+  color: #ccc;
+  font-size: 24px;
+  text-align: center;
 }
 form{
   display: flex;
 }
-input{
+input[type=text]{
   width: calc(100% - 224px);
   margin-right: 24px;
   border-radius: 4px;
@@ -59,11 +70,14 @@ input{
   border: none;
   display: inline-block;
   width: 200px;
-  background: purple;
+  background: darkmagenta;
   color: white;
   padding: 4px 10px;
   font-family: 'Ubuntu Mono', monospace;
   font-weight: 700;
   font-size: 18px;
   border-radius: 4px;
+}
+i{
+  padding: 0 4px;
 }

@@ -16,12 +16,12 @@
       <ul v-if="todos.length" class="todos__list">
         <li v-for="(todo, index) in todos" class="todos__item">
           <input type="checkbox" name="" v-model="todo.done" id="">
-          {{ todo.task }}
+          <p class="todos__ttl">{{ todo.task }}</p>
           {{ todo.date }}
         </li>
       </ul>
-      <ul v-else>
-        <li><p>No tasks</p></li>
+      <ul v-else class="todos__list">
+        <li><p class="no-task-ttl"><i class="fas fa-spider"></i>No Tasks</p></li>
       </ul>
       <!-- /.todos__list -->
       <form action="" @submit.prevent="insertTodo">
