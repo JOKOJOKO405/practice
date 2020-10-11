@@ -25,15 +25,10 @@
         <li><p class="no-task-ttl"><i class="fas fa-spider"></i>No Tasks</p></li>
       </ul>
       <!-- /.todos__list -->
-      <form v-for="(todo, index) in todos"
-            v-if="todo.modify === true"
-            @submit.prevent="modifyTodo(index)">
-        <input type="text" v-model="modifyItems" >
-        <button class="add-btn">Modify todo</button>
-      </form>
       <form @submit.prevent="insertTodo">
-        <input type="text" v-model="addItems" >
-        <button class="add-btn">Add todo</button>
+        <input type="text" v-model="addItems">
+        <button v-if="!modify" class="add-btn">Add todo</button>
+        <button v-else class="add-btn edit-btn">Edit todo</button>
       </form>
     </div>
   </div>

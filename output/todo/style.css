@@ -101,6 +101,9 @@ button{
   background: darkmagenta;
   font-size: 18px;
 }
+.edit-btn{
+  background: tomato;
+}
 .del-btn{ 
   width: 100px;
   background: darkorange;
