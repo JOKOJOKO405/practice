@@ -4,18 +4,20 @@
   const btn = document.querySelector('#button');
 
   btn.addEventListener('click', () => {
-    const n = Math.floor(Math.random() * 3);
+    const result = ['大吉', '中吉', '凶', '大凶'];
 
-    switch (n) {
-      case 0:
-        btn.textContent = 'あたり';
-        break;
-      case 1:
-        btn.textContent = '???';
-        break;
-      case 2:
-        btn.textContent = 'はずれ';
-        break;
-    }
+    btn.textContent = result[Math.floor(Math.random() * result.length)];
+
+    // switch (n) {
+    //   case 0:
+    //     btn.textContent = 'あたり';
+    //     break;
+    //   case 1:
+    //     btn.textContent = '???';
+    //     break;
+    //   case 2:
+    //     btn.textContent = 'はずれ';
+    //     break;
+    // }
   });
 }
